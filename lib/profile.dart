@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -81,14 +82,34 @@ class _MyProfileState extends State<MyProfile> {
         backgroundColor: const Color.fromARGB(255, 32, 1, 46),
         actions: [
           Padding(
-            padding: EdgeInsets.only(
-                right: MediaQuery.of(context).size.width * 0.12),
+            padding: const EdgeInsets.only(right: 8.0),
             child: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MyProfile(),
+                  ),
+                );
+              },
               icon: const Icon(Icons.person_outlined,
                   size: 30, color: Colors.white38),
             ),
           ),
+          Padding(
+              padding: EdgeInsets.only(
+                  right: MediaQuery.of(context).size.width * 0.12),
+              child: IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                  FirebaseAuth.instance.signOut();
+                },
+                icon: const Icon(
+                  Icons.logout,
+                  size: 20,
+                  color: Colors.white38,
+                ),
+              )),
         ],
       ),
       body: Align(
