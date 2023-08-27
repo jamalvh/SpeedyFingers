@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 //pub.dev
 import 'package:hive_flutter/hive_flutter.dart';
+// ignore: depend_on_referenced_packages
 import 'package:firebase_core/firebase_core.dart';
 import 'package:typetest/home.dart';
 import 'package:typetest/login.dart';
