@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -19,6 +20,19 @@ class _LoginScreenState extends State<LoginScreen> {
 
   final user = FirebaseAuth.instance.currentUser;
 
+  /// Check If Email Is Taken
+  Future<bool> checkIfEmailExists(String email) async {
+    try {
+      // Get reference to Firestore collection
+      var collectionRef = FirebaseFirestore.instance.collection('users');
+
+      var doc = await collectionRef.doc(email).get();
+      return !doc.exists;
+    } catch (e) {
+      rethrow;
+    }
+  }
+
   Future signIn() async {
     await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: logEmailTextEditingController.text.trim(),
@@ -26,11 +40,30 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   Future signUp() async {
+    // create user
     if (passwordVerification()) {
       FirebaseAuth.instance.createUserWithEmailAndPassword(
           email: regEmailTextEditingController.text.trim(),
           password: regPasswordTextEditingController.text.trim());
     }
+  }
+
+  Future addUserDatails(String username, String email) async {
+    await FirebaseFirestore.instance.collection('users').doc(username).set({
+      'username': username,
+      'email': email,
+      'overallAvgWpm': 0,
+      'numTestsStarted': 0,
+      'highestWpm': 0,
+      'highest15SecondWpm': 0,
+      'accuracyOfHighest15SecondWpm': 0,
+      'highest30SecondWpm': 0,
+      'accuracyOfHighest30SecondWpm': 0,
+      'highest60SecondWpm': 0,
+      'accuracyOfHighest60SecondWpm': 0,
+      'highest120SecondWpm': 0,
+      'accuracyOfHighest120SecondWpm': 0,
+    });
   }
 
   bool passwordVerification() {
@@ -194,13 +227,20 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                           ),
                         ),
-                        onPressed: () {
+                        onPressed: () async {
+                          bool emailAvailable = await checkIfEmailExists(
+                              regEmailTextEditingController.text.trim());
                           if (regUsernameTextEditingController
                                   .text.isNotEmpty &&
                               regEmailTextEditingController.text.isNotEmpty &&
                               regPasswordTextEditingController
-                                  .text.isNotEmpty) {
+                                  .text.isNotEmpty &&
+                              emailAvailable) {
                             signUp();
+                            // save user details
+                            addUserDatails(
+                                regUsernameTextEditingController.text.trim(),
+                                regEmailTextEditingController.text.trim());
                           } else {
                             null;
                           }
