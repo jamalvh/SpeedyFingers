@@ -1,4 +1,4 @@
-# speedyfingers
+# SpeedyFingers 🧬
 
 I developed a dynamic and user-friendly Typing Test website utilizing Flutter, Dart, and Firebase technologies, aiming to enhance typing skills and accuracy while providing a seamless user experience. The project encompasses customizable typing test sessions, highscore tracking, and a sophisticated vector-based accuracy comparator system to identify and highlight mistakes, thereby facilitating a comprehensive learning environment for users.
 
