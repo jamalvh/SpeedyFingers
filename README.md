@@ -6,7 +6,7 @@
 <img width="1512" alt="Screenshot 2024-03-23 at 8 32 31 PM" src="https://github.com/jamalvh/speedyfingers/assets/113135025/177af079-bf1a-4d8d-83e8-d3db68c82f9b">
 
 
-I developed a dynamic and user-friendly Typing Test website utilizing Flutter, Dart, and Firebase technologies, aiming to enhance typing skills and accuracy while providing a seamless user experience. The project encompasses customizable typing test sessions, highscore tracking, and a sophisticated vector-based accuracy comparator system to identify and highlight mistakes, thereby facilitating a comprehensive learning environment for users.
+Dynamic and user-friendly Typing Test website utilizing Flutter, Dart, and Firebase technologies, aiming to enhance typing skills and accuracy while providing a seamless user experience. The project encompasses customizable typing test sessions, highscore tracking, and a sophisticated vector-based accuracy comparator system to identify and highlight mistakes, thereby facilitating a comprehensive learning environment for users.
 
 Key Features:
 
