@@ -114,9 +114,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   fontSize: 35,
                   fontWeight: FontWeight.bold),
             ),
-            onPressed: () {
-              Navigator.pop(context);
-            },
+            onPressed: () {},
           ),
         ),
         backgroundColor: const Color.fromARGB(255, 32, 1, 46),

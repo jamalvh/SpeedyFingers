@@ -660,6 +660,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   }
                                   ind++;
                                 }
+                                // TODO: figure out why wpm is always even result
                                 wpm = wpmChecker *
                                     (60 / timeSelected); // 15s * 4 = 60s
                                 acc = ((totalLettersChecker - mistakesChecker) /
