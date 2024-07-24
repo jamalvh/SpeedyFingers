@@ -1,7 +1,13 @@
-# speedyfingers
+# 🎆 SpeedyFingers
 
-I developed a dynamic and user-friendly Typing Test website utilizing Flutter, Dart, and Firebase technologies, aiming to enhance typing skills and accuracy while providing a seamless user experience. The project encompasses customizable typing test sessions, highscore tracking, and a sophisticated vector-based accuracy comparator system to identify and highlight mistakes, thereby facilitating a comprehensive learning environment for users.
+Dynamic typing test website utilizing Flutter, Dart, and Firebase technologies, aiming to enhance typing skills and accuracy while providing a seamless user experience. The project encompasses customizable typing test sessions, highscore tracking, and a sophisticated vector-based accuracy comparator system to identify and highlight mistakes, thereby facilitating a comprehensive learning environment for users.
 
+<img width="500" alt="Screenshot 2024-03-23 at 8 36 09 PM" src="https://github.com/jamalvh/speedyfingers/assets/113135025/15b7f6fb-af06-4c2f-a4f4-61b5941bcd25">
+<img width="500" alt="Screenshot 2024-03-23 at 8 37 12 PM" src="https://github.com/jamalvh/speedyfingers/assets/113135025/cf352f95-5ce8-42bc-8dda-563a7c959a56">
+<img width="500" alt="Screenshot 2024-03-23 at 8 38 10 PM" src="https://github.com/jamalvh/speedyfingers/assets/113135025/243bb7ad-1402-4c5b-900a-14ca5cd8da6c">
+<img width="500" alt="Screenshot 2024-03-23 at 8 32 31 PM" src="https://github.com/jamalvh/speedyfingers/assets/113135025/177af079-bf1a-4d8d-83e8-d3db68c82f9b">
+
+\
 Key Features:
 
 1. Customizable Typing Test Sessions:
@@ -23,4 +29,3 @@ Firebase integration enables secure user authentication and management. Users ca
 The website boasts an intuitive and visually appealing interface, enhancing the overall user experience. Clear instructions, aesthetically pleasing design elements, and easy navigation contribute to a welcoming and engaging environment for users of all skill levels.
 
 In conclusion, my Typing Test website developed with Flutter, Dart, Firebase, and HiveDB redefines typing practice by offering customizable sessions, accurate mistake identification, and a seamless highscore tracking experience. This project not only assists users in honing their typing skills but also provides valuable insights into their progress. Its combination of cutting-edge technology and user-centric design makes it an ideal tool for individuals striving to enhance their typing proficiency.
-
